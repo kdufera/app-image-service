@@ -16,7 +16,7 @@ router.post('/saveSocialMedia',function(req, res) {
 	});
 
 	profile.checkForValidToken(body.token).then((validToken) => {
-		if(validToken._id === "5ec1e099bd1343e81dbcc1e7") { // server ID checking for valid token
+		if(validToken._id === "5ec2c1e870985f0016c91065") { // server ID checking for valid token
 			profile.saveUserSocialMediaInfo().then((data) => {
 				if(data) {
 					res.status(200).send();
