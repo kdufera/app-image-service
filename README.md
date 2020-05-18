@@ -1,29 +1,13 @@
-# README #
+### Info ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Scrape service used to scrape user data from different social media platforms.
 
-### What is this repository for? ###
+### Config ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Install MongoDB and start MongoDB locally
+* Install nodemon  `npm i nodemon -g`
+* `cd /auth` or the main directory and run `npm i` to install all required packages.
 
-### How do I get set up? ###
+### Run ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* `nodemon .` to run the app
