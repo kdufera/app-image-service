@@ -7,21 +7,21 @@ const bcrypt = require('bcryptjs');
 const validator = require('validator');
 
 
-const ProfileSchema = new mongoose.Schema({
+const ImageProfileSchema = new mongoose.Schema({
     userId: {
         type:String,
         required:true,
         trim: true,
         minlength:6
     },
-    socialMediaType: {
+    imageType: {
         type: String,
         required: true,
         minlength: 5,
         maxlength:10
 
     },
-    socialMediaUrl: {
+    imageUrl: {
         type: String,
         required: true,
         minlength:10,
@@ -42,7 +42,7 @@ const ProfileSchema = new mongoose.Schema({
 });
 
 
-ProfileSchema.methods.saveUserSocialMediaInfo = function () {
+ImageProfileSchema.methods.saveUserImage = function () {
     var profile = this;
     return profile.save().then((acg) => { //TDOD: based  on user input should update currently stored FB,TW, or IG URL before saving a new record
         if(!acg) {
@@ -54,7 +54,7 @@ ProfileSchema.methods.saveUserSocialMediaInfo = function () {
 }
 
 
-ProfileSchema.methods.checkForValidToken = function (token)  {
+ImageProfileSchema.methods.checkForValidToken = function (token)  {
     var decoded;
     try {
         decoded = jwt.verify(token,"test_jwt_key");
@@ -67,5 +67,5 @@ ProfileSchema.methods.checkForValidToken = function (token)  {
 }
 
 
-const Profile = mongoose.model('Profile', ProfileSchema);
+const Profile = mongoose.model('Profile', ImageProfileSchema);
 module.exports = {Profile};

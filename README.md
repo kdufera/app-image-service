@@ -1,6 +1,5 @@
-### Info ###
 
-Scrape service used to scrape user data from different social media platforms.
+Image service used to store and track uploaded images.
 
 ### Config ###
 

@@ -15,8 +15,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/api/v1/scrape', authRouter);  
+app.use('/api/v1/image', authRouter);  
 
 app.listen(app.get('port'),function(){
-    console.log(`Scrape server is running. Listening on ${app.get('port')}`);
+    console.log(`Image server is running. Listening on ${app.get('port')}`);
 });
